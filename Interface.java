@@ -25,6 +25,11 @@ public class Interface implements ActionListener{
 			panel.add(button2);
 
 			button2.addActionListener(this);
+
+			JButton button3 = new JButton("Perimeter of Circle");
+			panel.add(button3);
+
+			button3.addActionListener(this);
 		}
 
 		public static float min (float a, float b){
@@ -49,6 +54,18 @@ public class Interface implements ActionListener{
 				float number2 = Float.parseFloat(num2);
 
 				JOptionPane.showMessageDialog(null, "Min Number is " + String.format("%.0f", min(number1, number2)), "", JOptionPane.INFORMATION_MESSAGE);
+			
+			}
+
+	
+			else if (btn.equals("Perimeter of Circle")){
+				String num1 = JOptionPane.showInputDialog("Please put in a radius.");
+				
+
+				float number1 = Float.parseFloat(num1);
+				
+
+				JOptionPane.showMessageDialog(null, "The Perimeter of The Circle is " + String.format("%.2f",(number1 * 2 * 3.14)), "", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 		
