@@ -30,6 +30,11 @@ public class Interface implements ActionListener{
 			panel.add(button3);
 
 			button3.addActionListener(this);
+			
+			JButton button4 = new JButton("Perimeter of Rectangle");
+			panel.add(button4);
+
+			button4.addActionListener(this);
 		}
 
 		public static float min (float a, float b){
@@ -67,8 +72,19 @@ public class Interface implements ActionListener{
 
 				JOptionPane.showMessageDialog(null, "The Perimeter of The Circle is " + String.format("%.2f",(number1 * 2 * 3.14)), "", JOptionPane.INFORMATION_MESSAGE);
 			}
+			
+			else if (btn.equals("Perimeter of Rectangle")){
+				String num1 = JOptionPane.showInputDialog("Please put in one length of your rectangle.");
+				String num2 = JOptionPane.showInputDialog("Please put in one width of your rectangle.");
+				
+
+				float number1 = Float.parseFloat(num1);
+				float number2 = Float.parseFloat(num2);
+				
+
+				JOptionPane.showMessageDialog(null, "The Perimeter of The Circle is " + String.format("%.2f",(number1 * 2 + (number2 * 2))), "", JOptionPane.INFORMATION_MESSAGE);
+			}
 		}
-		
 
 		public static void main(String[] args){
 
