@@ -35,6 +35,12 @@ public class Interface implements ActionListener{
 			panel.add(button4);
 
 			button4.addActionListener(this);
+			
+			JButton button5 = new JButton("Surface Area of Cylinder");
+			panel.add(button5);
+
+			button5.addActionListener(this);
+			
 		}
 
 		public static float min (float a, float b){
@@ -84,7 +90,20 @@ public class Interface implements ActionListener{
 
 				JOptionPane.showMessageDialog(null, "The Perimeter of The Circle is " + String.format("%.2f",(number1 * 2 + (number2 * 2))), "", JOptionPane.INFORMATION_MESSAGE);
 			}
+			
+			else if (btn.equals("Surface Area of Cylinder")){
+				String num1 = JOptionPane.showInputDialog("Please put in a radius.");
+				String num2 = JOptionPane.showInputDialog("Please put in a height.");
+				
+				float number1 = Float.parseFloat(num1);
+				float number2 = Float.parseFloat(num2);
+				
+				JOptionPane.showMessageDialog(null, "The Surface Area of the Cylinder is " + String.format("%.2f",(2 * 3.14159265359 * number1 * number2 +(2 * 3.14159265359 * number1 * number1))),"",JOptionPane.INFORMATION_MESSAGE);
+				
+				
+			}
 		}
+				
 
 		public static void main(String[] args){
 
