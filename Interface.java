@@ -39,7 +39,7 @@ public class Interface implements ActionListener{
 			JButton button5 = new JButton("Surface Area of Cylinder");
 			panel.add(button5);
 
-			button5.addActionListener(this);
+			button5.addActionListener(this); 
 			
 		}
 
@@ -101,6 +101,20 @@ public class Interface implements ActionListener{
 				JOptionPane.showMessageDialog(null, "The Surface Area of the Cylinder is " + String.format("%.2f",(2 * 3.14159265359 * number1 * number2 +(2 * 3.14159265359 * number1 * number1))),"",JOptionPane.INFORMATION_MESSAGE);
 				
 				
+			}
+			else if (btn.equals("Area of Square")) {
+				String side = JOptionPane.showInputDialog("please enter the first side"); 
+
+				double side1 = Double.parseDouble(side);
+
+				JOptionPane.showMessageDialog(null, "the area of the square is " + (side1*side1) + " CM2 ", "Area of a Square", JOptionPane.INFORMATION_MESSAGE); 
+			}
+			else if (btn.equals("Area of Circle")) {
+				String radius = JOptionPane.showInputDialog("Please enter the radius");
+
+				double radius1 = Double.parseDouble(radius); 
+
+				JOptionPane.showMessageDialog(null, "the area of your circle is " + (radius1*3.14*3.14) + " cm2 ", "Area of a circle", JOptionPane.INFORMATION_MESSAGE);
 			}
 		}
 				
