@@ -54,7 +54,6 @@ public class Interface implements ActionListener{
 			button4.addActionListener(this);
 			button4.setBounds(200, 60, 180, 50);
 			
-			
 			JButton button5 = new JButton("Perimeter of Circle");
 			panel.add(button5);
 			button5.setBackground(new Color(255,255,255));
@@ -62,7 +61,6 @@ public class Interface implements ActionListener{
 			button5.setFocusPainted(false);
 			button5.addActionListener(this);
 			button5.setBounds(200, 120, 180, 50);
-			
 			
 			JButton button6 = new JButton("Perimeter of Rectangle");
 			panel.add(button6);
@@ -161,9 +159,9 @@ public class Interface implements ActionListener{
 			else if (btn.equals("Perimeter of Circle")){
 				String radiusAsString = JOptionPane.showInputDialog("Please enter the radius of the circle: ");
 				
-				float radius = Float.parseFloat(numberAsString);
+				float radius = Float.parseFloat(radiusAsString);
 				
-				JOptionPane.showMessageDialog(null, "The perimeter of the circle is: " + String.format("%.2f",(number * 2 * PI)), "Perimeter of Circle", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "The perimeter of the circle is: " + String.format("%.2f",(radius * 2 * PI)), "Perimeter of Circle", JOptionPane.INFORMATION_MESSAGE);
 			}
 			
 			else if (btn.equals("Perimeter of Rectangle")){
