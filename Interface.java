@@ -159,9 +159,9 @@ public class Interface implements ActionListener{
 				JOptionPane.showMessageDialog(null, "The perimeter of the square is: " + (4 * side), "Perimeter of Rectangle", JOptionPane.INFORMATION_MESSAGE);
 			}
 			else if (btn.equals("Perimeter of Circle")){
-				String numberAsString = JOptionPane.showInputDialog("Please enter the radius of the circle: ");
+				String radiusAsString = JOptionPane.showInputDialog("Please enter the radius of the circle: ");
 				
-				float number = Float.parseFloat(numberAsString);
+				float radius = Float.parseFloat(numberAsString);
 				
 				JOptionPane.showMessageDialog(null, "The perimeter of the circle is: " + String.format("%.2f",(number * 2 * PI)), "Perimeter of Circle", JOptionPane.INFORMATION_MESSAGE);
 			}
@@ -238,4 +238,4 @@ public class Interface implements ActionListener{
 			new Interface(); // Calling the contuctor Method - New invokes the contructor method
 	
 		}
-	}
+}
